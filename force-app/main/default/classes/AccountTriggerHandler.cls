@@ -7,4 +7,13 @@ public with sharing class AccountTriggerHandler {
             acc.Description = 'Before Insert Trigger';
         }
     }
+    // create a method onBeforeUpdate
+    public void onBeforeUpdate(List<Account> newList, Map<Id, Account> oldMap) {
+        for(Account acc : newList) {
+            Account oldAccount = oldMap.get(acc.Id);
+            if(acc.Name != oldAccount.Name) {
+                acc.Description = 'Before Update Trigger';
+            }
+        }
+    }
 }
