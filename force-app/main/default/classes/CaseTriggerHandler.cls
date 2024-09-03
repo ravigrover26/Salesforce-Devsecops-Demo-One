@@ -1,6 +1,8 @@
 public with sharing class CaseTriggerHandler {
     public CaseTriggerHandler() {
-
+        System.debug('CaseTriggerHandler constructor');
+        System.debug('CaseTriggerHandler constructor');
+        System.debug('CaseTriggerHandler constructor');
     }
     // This method is called from the CaseTrigger
     public void onBeforeInsert(List<Case> newCases) {
